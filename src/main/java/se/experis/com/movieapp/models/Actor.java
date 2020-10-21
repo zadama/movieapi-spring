@@ -1,10 +1,12 @@
 package se.experis.com.movieapp.models;
 
+import ch.qos.logback.classic.db.names.ColumnName;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @JsonIdentityInfo(
@@ -22,11 +24,10 @@ public class Actor {
     @Column
     public String lastname;
 
-    @Column
-    public Date date_of_birth;
 
     @Column
     public String imdb_url;
 
-
+    @Column(name = "date_of_birth", columnDefinition = "DATE")
+    public LocalDate date_of_birth;
 }
