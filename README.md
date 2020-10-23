@@ -18,4 +18,7 @@ Endpoints     | Type          | Description
 "/api/v1/actors/{id}" | (GET)| Gets a specific actor.
 "/api/v1/actors/{id}" | (DELETE)| Deletes an actor.
 
+"/api/v1/actors/filter?from={date}&to={date}" | (GET)|  Gets an actor whose date of birth is between the two dates.
+"/api/v1/movies/search?title={string}" | (GET)|  Gets a movie based on title.
+
 The endpoints are pretty self explanatory, hence the Genre and Director endpoints not shown. They are identical to Actor, replacing "actors" with e.g. "genre" & "directors".
