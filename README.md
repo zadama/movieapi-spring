@@ -1,6 +1,8 @@
 # Movies REST API(Hibernate, Postgres,Spring)
 API which can create, read, update and delete from a Postgres database using Hibernate.
 
+The API can be found at: https://protected-plains-75730.herokuapp.com/
+
 ## Endpoints
 Endpoints     | Type          | Description
 ------------- | ------------- | -------------
