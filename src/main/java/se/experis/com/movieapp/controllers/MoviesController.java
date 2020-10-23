@@ -254,7 +254,8 @@ public class MoviesController {
 
         String searchTitle = title.toUpperCase();
         CommonResponse cr = new CommonResponse();
-        var results = movieRepository.getMovieByTitleContaining(searchTitle);
+        var results = movieRepository.getMovieByTitleIsLike(
+                searchTitle);
 
         cr.data = results;
         cr.message = results.size() > 0 ? "Results of movie search for: " + title : "No movies were found containing : " + title;
